@@ -11,5 +11,6 @@ namespace BookStorewebApi.SharedViewModel
         public bool IsSuccess { get; set; }
         public IEnumerable<string> Errors { get; set; }
         public DateTime? ExpireDate { get; set; }
+        public string email { get; set; }
     }
 }

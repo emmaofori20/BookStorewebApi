@@ -11,7 +11,7 @@ namespace BookStorewebApi.SharedViewModel
         public string Name { get; set; }
         public string Author { get; set; }
         public string Description { get; set; }
-        public IFormFile BookPicture { get; set; }
+        //public IFormFile BookPicture { get; set; }
         public decimal Price { get; set; }
         public int CategoryId { get; set; }
 

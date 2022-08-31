@@ -68,7 +68,8 @@ namespace BookStorewebApi.Services
             {
                 Message = tokenAsString,
                 IsSuccess = true,
-                ExpireDate = token.ValidTo
+                ExpireDate = token.ValidTo,
+                email = user.Email
             };
         }
 

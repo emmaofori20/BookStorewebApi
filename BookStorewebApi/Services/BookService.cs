@@ -25,7 +25,7 @@ namespace BookStorewebApi.Services
             {
                 Author = model.Author,
                 CategoryId = model.CategoryId,
-                BookPicture = Convertimage(model.BookPicture),
+                //BookPicture = Convertimage(model.BookPicture),
                 Description = model.Description,
                 Name = model.Name,
                 Price = model.Price

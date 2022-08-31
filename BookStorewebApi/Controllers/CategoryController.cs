@@ -1,6 +1,7 @@
 ﻿using BookStorewebApi.Models;
 using BookStorewebApi.Services.IServices;
 using BookStorewebApi.SharedViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -36,6 +37,7 @@ namespace BookStorewebApi.Controllers
             return Ok(_categoryService.GetBooksInCategory(id));
         }
 
+        [Authorize]
         [HttpPost]
         [Route("AddCategory")]
         public IActionResult AddCategory([FromBody]AddCategoryViewModel model)
@@ -49,6 +51,7 @@ namespace BookStorewebApi.Controllers
         }
 
         // DELETE api/<CategoryController>/5
+        [Authorize]
         [HttpDelete]
         [Route("DeleteCategory/{id}")]
         public IActionResult DeleteCategory(int id)
@@ -62,6 +65,7 @@ namespace BookStorewebApi.Controllers
             return NotFound($"Book with id: {id} is not found");
         }
 
+        [Authorize]
         [HttpPost]
         [Route("EditCategory")]
         public IActionResult EditCategory(Category category)

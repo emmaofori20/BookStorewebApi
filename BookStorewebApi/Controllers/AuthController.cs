@@ -54,7 +54,7 @@ namespace BookStorewebApi.Controllers
                     return Ok(result);
                 }
 
-                return BadRequest(result);
+                return BadRequest("error ocurres");
             }
 
             return BadRequest("Some properties are not valid");
